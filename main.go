@@ -1,9 +1,7 @@
 package main
 
-import (
-	"fmt"
-)
+import "newProject/echotest"
 
 func main() {
-	fmt.Println("Hello World!")
+	echotest.Echotest()
 }
