@@ -7,5 +7,6 @@ services:
     volumes:
       - .:/app # ローカルとコンテナのディレクトリをバインドマウント（同期）
       - go_path:/go # パッケージやバイナリファイルのインストール先（$GOPATH）を永続化
+    command: ["./start.sh"]
 volumes:
   go_path:
