@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '3030:1323' # ローカルの3030番ポートでコンテナの1323番ポートに接続
+    volumes:
+      - .:/app # ローカルとコンテナのディレクトリをバインドマウント（同期）
+      - go_path:/go # パッケージやバイナリファイルのインストール先（$GOPATH）を永続化
+volumes:
+  go_path:
