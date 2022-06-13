@@ -8,5 +8,15 @@ services:
       - .:/app # ローカルとコンテナのディレクトリをバインドマウント（同期）
       - go_path:/go # パッケージやバイナリファイルのインストール先（$GOPATH）を永続化
     command: ["./start.sh"]
+  db:
+    image: mysql:8.0.29-oracle
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: 'webuser'
+      MYSQL_PASSWORD: 'webpass'
+      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_DATABASE: 'go_mysql8_development'
 volumes:
   go_path:
