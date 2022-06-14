@@ -1,0 +1,1 @@
+oapi-codegen -package oapi dist/openapi.yaml > dist/openapi.go

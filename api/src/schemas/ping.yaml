@@ -1,0 +1,6 @@
+      type: object
+      required:
+        - ping
+      properties:
+        ping:
+          type: string

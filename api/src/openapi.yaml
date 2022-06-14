@@ -1,0 +1,12 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: test
+servers:
+  - url: http://localhost
+paths:
+  /ping:
+    $ref: "./paths/ping.yaml"
+components:
+  schemas:
+    $ref: "./schemas/index.yaml"
