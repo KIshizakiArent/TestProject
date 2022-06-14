@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: test
+servers:
+  - url: 'http://localhost'
+paths:
+  /ping:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ping'
+components:
+  schemas:
+    Ping:
+      type: object
+      required:
+        - ping
+      properties:
+        ping:
+          type: string
